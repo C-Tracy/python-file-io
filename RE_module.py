@@ -27,8 +27,8 @@ def get_re_output(n, input, output):
     >>> get_re_output("is", "test.txt", "testoutput2.txt")
     Opening input file
     Done!
-    dummy.txt is closed? True
-    output.txt is closed? True
+    input file is closed? True
+    output file is closed? True
 
     """
     REpattern_obj = re.compile(n, re.IGNORECASE)
@@ -42,8 +42,8 @@ def get_re_output(n, input, output):
                     match = REpattern_obj.search(line)
                     out_stream.write("{0}\t{1}\n".format(line_index, match.group()))
     print('Done!')
-    print('dummy.txt is closed?', in_stream.closed)
-    print('output.txt is closed?', out_stream.closed)
+    print('input file is closed?', in_stream.closed)
+    print('output file is closed?', out_stream.closed)
 
 
 if __name__ == '__main__':
